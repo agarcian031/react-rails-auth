@@ -4,12 +4,14 @@ import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import FetchUser from './components/FetchUser';
 import { Switch, Route } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 
 const App = () => (
   <Fragment>
     <Navbar />
+    <FetchUser>
     <Container>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -18,6 +20,7 @@ const App = () => (
         <Route component={NoMatch} />
       </Switch>
     </Container>
+    </FetchUser>
   </Fragment>
 );
 
