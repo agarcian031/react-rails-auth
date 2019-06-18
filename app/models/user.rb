@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  serialize :liked_cars, Array
+  serialize :liked_cats, Array
 
   def self.random_cat(ids)
     ids = ids.empty? ? [0] : ids
