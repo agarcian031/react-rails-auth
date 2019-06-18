@@ -56,7 +56,9 @@ export default class ConnectedLogin extends React.Component {
   render() {
     return (
       <AuthConsumer>
-        { auth => <Login {...this.props} auth={auth} />}
+        {/* auth is the same as value  */}
+        {/* { auth => <Login {...this.props} auth={auth} />} */}
+        { authProviderValueObject => <Login {...this.props} auth={authProviderValueObject} />}
       </AuthConsumer>
     )
   }
